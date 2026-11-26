@@ -5,14 +5,14 @@ permalink: /privacy-policy/
 
 # Swipecap Privacy Policy
 
-Effective date: 25 November 2026
+Effective date: 26 November 2026
 
 Swipecap ("the app") is an Android app that counts the Reels and Shorts you watch and, if you choose, stops those viewers after a daily limit. This policy explains what the app accesses, what it stores, and what it sends off your phone. The Play application id is `app.swipecap`.
 
 ## Summary
 - Daily counts, captions and anything you watch stay on your phone. Swipecap does not upload Reels, screen text or your counts.
 - There is no account and no cloud sync.
-- Starting with version 1.0.2, Swipecap sends a small, content-free install and app-open signal to Google Analytics (Firebase / GA4) so that installs can be measured. This uses the Internet permission. It does not use your advertising ID.
+- Starting with version 1.0.2, Swipecap sends a small, content-free install and app-open signal to Google Analytics (Firebase / GA4). Starting with version 1.0.3, it also sends that signal to Meta so that ads can be measured. This uses the Internet permission, and from version 1.0.3 it may include your advertising ID.
 - Swipecap does not use that signal for ad personalization, and it does not include your counts or anything you watch.
 
 ## Accessibility Service
@@ -31,20 +31,23 @@ Swipecap stores the following only in its private app storage on your phone:
 - Your daily limit, your optional estimates of daily count and daily time, and app settings (for example whether the floating counter is shown).
 - Fixed, content-free status reasons used to show why something was or was not counted.
 
-App backup is disabled, so this on-device data is not copied to Google Drive backups. It is not sent to Google Analytics.
+App backup is disabled, so this on-device data is not copied to Google Drive backups. It is not sent to Google Analytics or Meta.
 
-## Analytics
-To understand how people find, install and open Swipecap, the app includes one third-party SDK: Firebase Analytics (Google Analytics 4), operated by Google. Swipecap does not include the Meta (Facebook) SDK or any advertising SDK.
+## Analytics and advertising attribution
+To understand whether a Meta or Google / YouTube ad led someone to install or open Swipecap, the app includes two third-party SDKs:
 
-Firebase Analytics may collect and share with Google:
+- Firebase Analytics (Google Analytics 4), operated by Google
+- The Meta (Facebook) Android SDK app events, operated by Meta Platforms
+
+These SDKs may collect and share:
 - App activity: an app install / first-open event, later app-open events, and a coarse `onboarding_complete` event that does not describe what you watch or how many Reels you counted
-- Device or other identifiers: a random Firebase app-instance ID created for this install, and the Google Play install referrer when the app was installed from Play. Swipecap turns off advertising ID collection and does not request the advertising ID permission.
+- Device or other identifiers: a random Firebase app-instance ID created for this install, your advertising ID (Android Advertising ID), and the Google Play install referrer when the app was installed from Play
 - Approximate location: Google Analytics derives a coarse location (such as country or city) from a masked IP address. Swipecap does not request any location permission.
-- Technical details Firebase needs to deliver the event (for example app version, device model and Android version)
+- Technical details the SDKs need to deliver the event (for example app version, device model and Android version)
 
-Google Analytics does not receive your daily counts, captions, creator names, Reel or Short content, or a Swipecap account id. There is no account. Ad personalization signals and automatic screen reporting are turned off. Swipecap does not include Crashlytics or any other analytics SDK.
+They do not receive your daily counts, captions, creator names, Reel or Short content, or a Swipecap account id. There is no account. Ad personalization signals and automatic screen reporting for Google Analytics are turned off. Automatic Meta logging of in-app purchases and other in-app events is turned off. Swipecap does not include Crashlytics or other extra analytics SDKs.
 
-This data is sent over an encrypted connection. Google processes it under its own policies, and Swipecap uses it for analytics and to measure where installs come from. Swipecap does not provide an in-app button that deletes the copies held by Google. Uninstalling Swipecap removes the app-instance ID from your phone and stops further events from this app.
+This data is sent over an encrypted connection. Google and Meta process it under their own policies, and it is used for analytics and advertising / marketing attribution. Swipecap does not provide an in-app button that deletes the copies held by Google or Meta. You can reset your advertising ID in Android settings, and you can uninstall Swipecap, which stops further events from this app.
 
 ## How to delete your data
 In the app, open Settings, then Delete saved counts. That removes the saved counts on your phone. Uninstalling Swipecap deletes everything the app stored, including settings and estimates, and stops further analytics events. Turning off Swipecap counter in Android Accessibility settings stops screen access and does not by itself delete saved counts.
@@ -53,10 +56,10 @@ In the app, open Settings, then Delete saved counts. That removes the saved coun
 Swipecap is not directed at children under 13 and does not knowingly collect any information from children. It is intended for people aged 18 and over.
 
 ## Not affiliated
-Swipecap is an independent app. It is not affiliated with, endorsed or sponsored by Meta, Instagram, Google or YouTube. Instagram and Reels are trademarks of Meta Platforms, Inc. YouTube and YouTube Shorts are trademarks of Google LLC. The Google Analytics SDK described above is used only to measure installs and app opens.
+Swipecap is an independent app. It is not affiliated with, endorsed or sponsored by Meta, Instagram, Google or YouTube. Instagram and Reels are trademarks of Meta Platforms, Inc. YouTube and YouTube Shorts are trademarks of Google LLC. The Meta and Google analytics SDKs described above are used only to measure installs and app opens.
 
 ## Security
-Daily counts are protected by your phone's own security. Anyone with access to your unlocked phone can open the app and see its counts. Analytics events are sent to Google over HTTPS.
+Daily counts are protected by your phone's own security. Anyone with access to your unlocked phone can open the app and see its counts. Attribution events are sent to Google and Meta over HTTPS.
 
 ## Changes to this policy
 If the app's data practices change, this policy and the Google Play Data safety section will be updated before the change is released, and the effective date above will change.
